@@ -13,7 +13,7 @@ Sample docker-compose.yml
 version: '3.2'
 services:
   jenkins:
-    image: timo-reymann/jenkins-ci-with-docker
+    image: timoreymann/jenkins-ci-with-docker
     restart: always
     ports:
 #    Port for web ui
