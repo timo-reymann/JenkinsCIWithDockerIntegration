@@ -1,4 +1,4 @@
-FROM jenkinsci/jenkins:lts
+FROM jenkins/jenkins:lts-alpine
 USER root
 RUN  apt-get update -qq \
      && apt-get install -qqy apt-transport-https ca-certificates curl gnupg2 software-properties-common \
