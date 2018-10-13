@@ -8,6 +8,7 @@ because i want to run docker in an docker container where jenkins is running. An
 
 # How to use this?
 Sample docker-compose.yml
+
 ````
 version: '3.2'
 services:
@@ -28,7 +29,7 @@ volumes:
 #  Create docker volume for jenkins data previously mentioned in volumes
    jenkins_home:
      driver: local
-``` 
+````
 
 ## Further steps
 Just open your web browser and follow the install guide. Nothing else is to do.

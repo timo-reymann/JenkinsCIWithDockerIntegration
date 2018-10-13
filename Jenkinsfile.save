@@ -1,0 +1,23 @@
+#!groovy
+
+node {
+    properties([
+        parameters([
+             stringParam(name: 'tag', defaultValue: 'latest', description: 'Tag for build')        
+        ])
+    ])
+}
+
+node {
+    stage('VCS checkout') {
+       docker build -t jenkins-ci-with-docker .
+    }
+
+    stage('Build') {
+        sh "docker build -t jenkins-ci-with-docker:${params.tag} ."
+    }        
+   
+    stage("Publish") {
+        sh "docker push timoreymann/jenkins-ci-with-docker:${params.tag}"
+    }
+}
