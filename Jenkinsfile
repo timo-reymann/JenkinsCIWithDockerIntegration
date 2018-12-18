@@ -8,6 +8,8 @@ node {
         ])
     ])
 
+    currentBuild.description = params.tag
+
     def imageName = "timoreymann/jenkins-ci-with-docker"
     def credentials = 'timoreymann-docker'
     def registry = 'https://registry.hub.docker.com'
