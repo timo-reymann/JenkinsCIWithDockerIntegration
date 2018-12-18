@@ -20,7 +20,7 @@ node {
     }
 
     stage('Build') {
-        sh "docker build -t ${imageName} --pull ."
+        sh "docker build -t ${imageName}:${params.tag} --pull ."
     }        
    
     stage("Publish") {
