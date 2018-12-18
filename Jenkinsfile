@@ -20,17 +20,17 @@ node {
     }
 
     stage('Build') {
-        sh "docker build -t ${imageName}:${params.tag} --pull ."
+        docker.build(imageName, "--pull .")
     }        
    
     stage("Publish") {
         docker.withRegistry(registry, credentials) {
             if(params.tag != 'latest' || !params.release) {
-                sh "docker push ${imageName}:${params.tag}"
+                docker.push(params.tag)
             }
     
             if(params.release) {
-                sh "docker push ${imageName}:latest"
+                docker.push("latest")
             }
         }
     }
