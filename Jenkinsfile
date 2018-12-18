@@ -20,7 +20,7 @@ node {
     }
 
     stage('Build') {
-        docker.build(imageName, "--pull .")
+        app = docker.build(imageName, "--pull .")
     }        
    
     stage("Publish") {
