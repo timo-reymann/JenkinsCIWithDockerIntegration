@@ -26,11 +26,11 @@ node {
     stage("Publish") {
         docker.withRegistry(registry, credentials) {
             if(params.tag != 'latest' || !params.release) {
-                docker.push(params.tag)
+                app.push(params.tag)
             }
     
             if(params.release) {
-                docker.push("latest")
+                app.push("latest")
             }
         }
     }
