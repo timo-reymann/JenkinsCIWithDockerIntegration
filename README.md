@@ -1,5 +1,6 @@
 JenkinsCIWithDockerIntegration
 =============================
+[![Build Status](https://jenkins.timo-reymann.de/job/TR-GitHub/job/JenkinsCIWithDockerIntegration/job/master/badge/icon)](https://jenkins.timo-reymann.de/job/TR-GitHub/job/JenkinsCIWithDockerIntegration/job/master/)
 
 # Why this image?
 There already thousands of jenkins images, why you must make your own, come on ...
