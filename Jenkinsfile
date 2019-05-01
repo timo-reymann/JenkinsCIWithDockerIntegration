@@ -31,6 +31,11 @@ node {
     
             if(params.release) {
                 app.push("latest")
+				if(params.tag != 'latest') {
+					sh("git config user.email no-reply@timo-reymann.de")
+					sh("git config user.name 'Jenkins Pipeline'")
+					sh("git tag ${params.tag} && git push --tags")
+				}
             }
         }
     }
