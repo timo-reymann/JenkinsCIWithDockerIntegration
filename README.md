@@ -1,6 +1,6 @@
 JenkinsCIWithDockerIntegration
 =============================
-[![Build Status](https://jenkins.timo-reymann.de/buildStatus/icon?job=TR-GitHub%2FJenkinsCIWithDockerIntegration%2Fmaster)](https://jenkins.timo-reymann.de/job/TR-GitHub/job/JenkinsCIWithDockerIntegration/job/master/)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/timoreymann/jenkins-ci-with-docker)
 
 # Why this image?
 There already thousands of jenkins images, why you must make your own, come on ...
